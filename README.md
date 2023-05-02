@@ -1,53 +1,58 @@
-# Hyprland config files from Titus
+# Hyprland Configuration Files by Titus
 
 ![Screenshot](https://github.com/ChrisTitusTech/hyprland-titus/raw/main/hyprland-titus.png)
 
-## Install
+## Installation
+
+Ensure base-devel is installed before proceeding
 
 ### Yay
 
-Run as user NOT ROOT!
+**Important**: Execute the following commands as a regular user, NOT as root!
 
 ```
-# Before this you need base-devel installed
 git clone https://aur.archlinux.org/yay-bin
 cd yay-bin
 makepkg -si
 ```
 
-### Packages
+### Required Packages
 
 ``` bash
-yay -S hyprland-bin polkit-gnome ffmpeg neovim viewnior       \
-rofi pavucontrol thunar starship wl-clipboard wf-recorder     \
-swaybg grimblast-git ffmpegthumbnailer tumbler playerctl      \
+yay -S hyprland polkit-gnome ffmpeg neovim viewnior rofi      \
+pavucontrol thunar starship wl-clipboard wf-recorder swaybg   \
+grimblast-git ffmpegthumbnailer tumbler playerctl             \
 noise-suppression-for-voice thunar-archive-plugin kitty       \
 waybar-hyprland wlogout swaylock-effects sddm-git pamixer     \
-nwg-look-bin nordic-theme papirus-icon-theme dunst
+nwg-look-bin nordic-theme papirus-icon-theme dunst otf-sora   \
+ttf-nerd-fonts-symbols-common otf-firamono-nerd inter-font    \
+ttf-fantasque-nerd noto-fonts noto-fonts-emoji ttf-comfortaa  \
+ttf-jetbrains-mono-nerd ttf-icomoon-feather ttf-iosevka-nerd  \
+adobe-source-code-pro-fonts brightnessctl hyprpicker-git
 ```
 
-## Gotchas
+## Important Notes
 
-- Recommend archinstall with Sway as desktop for base
-- SDDM-GIT is required or you will run into shutdown bugs and delays
-- SDDM needs to be configured for autologin (recommend using swaylock on start of script for security)
-- Replace xdg-desktop-portal-wlr with **[xdg-desktop-portal-hyprland-git](https://wiki.hyprland.org/hyprland-wiki/pages/Useful-Utilities/Hyprland-desktop-portal/)**
+- It is recommended to use `archinstall` with Sway as the desktop environment for the base installation.
+- `SDDM-GIT` is required to avoid shutdown bugs and delays.
+- Configure SDDM for autologin (for security, use `swaylock` at the beginning of the script).
+- Replace `xdg-desktop-portal-wlr` with **[xdg-desktop-portal-hyprland-git](https://wiki.hyprland.org/hyprland-wiki/pages/Useful-Utilities/Hyprland-desktop-portal/)**.
 
-## Bugs
+## Known Issues
 
-- Hyprland is still in beta (0.2) as of the creation of these dot files
-- Sometimes my RX5700XT goes to sleep and requires a reload, because it is stuck on black screen.
+- Hyprland is in beta (version 0.2) at the time of creating these configuration files.
+- Occasionally, the RX5700XT may go to sleep and require a reload due to a stuck black screen.
 
-## Work In Progress
+## Roadmap
 
-- [ ] Help Popup with Hotkey
+- [ ] Hotkey for Help Popup
 - [ ] Wayland guide for nwg-look, wlr-randr, etc.
-- [ ] Synergy Workaround - Looking at waynergy or just using KVM
-- [ ] Gamescope Addition - Adding more parity with Steamdeck features
-- [x] More Customizations for Waybar - Battery, Backlight, etc.
-- [ ] Auto-configuration - Long term goal
+- [ ] Synergy Workaround - Exploring waynergy or KVM usage
+- [ ] Gamescope Integration - Enhancing compatibility with Steamdeck features
+- [x] Additional Customizations for Waybar - Battery, Backlight, etc.
+- [ ] Automatic Configuration - Long-term goal
 
-## Sources used making these
+## References
 
-- Official Hyprland Github <https://github.com/hyprwm/Hyprland>
-- Linux Mobiles Hyprland dot files <https://github.com/linuxmobile/hyprland-dots>
+- Official Hyprland GitHub: <https://github.com/hyprwm/Hyprland>
+- Linux Mobiles Hyprland Configuration Files: <https://github.com/linuxmobile/hyprland-dots>
